@@ -1,0 +1,96 @@
+body {
+  background-color: #010101;
+  color: #f9f9f9;
+  font-family: Montserrat, arial;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.form-container {
+  margin-top: 30px;
+}
+
+#js-save-task-btn {
+  display: none;
+}
+
+
+.input-task {
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 10px;
+  width: 260px;
+  border: none;
+  border-radius: 9px;
+  background-color: #3A3B45;
+  color: #f9f9f9;
+}
+
+::placeholder {
+  color: #f9f9f9;
+}
+
+.add-button {
+  margin-left: 2px;
+  font-size: 16px;
+  border-radius: 9px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #05c7f2;
+  color: #f9f9f9;
+}
+
+.task-list-container {
+  display: grid;
+  grid-template-columns: 201px 60px 60px;
+  align-items: center;
+  margin: 0 auto;
+  width: 315px;
+  color: #f9f9f9;
+  margin: 0 auto;
+  padding: 5px 5px;
+  margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+  margin-right: 3px;
+  font-size: 14px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 9px;
+}
+
+.edit-button {
+  background-color: #031f73;
+  color: #f9f9f9;
+}
+
+.delete-button {
+  background-color: #f24141;
+  color: #f9f9f9;
+}
+.save-button {
+  margin-left: 2px;
+  font-size: 16px;
+  border-radius: 9px;
+  padding: 10px 13px;
+  border: none;
+  background-color: #05c7f2;
+  color: #f9f9f9;
+}
