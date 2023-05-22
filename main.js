@@ -21,11 +21,11 @@ addTaskBtn.addEventListener('click', () => {
   addTask();
 })
 
+//display task list
 function renderList () {
   let todoHTML = '';
   
   myTask.forEach((list, index) => {
-    //const task = myTaskObject;
     
     const makeHTML = `
     <div class="task-list-container">
@@ -77,6 +77,7 @@ function renderList () {
   })*/
 }
 
+//saving task
 saveTaskBtn.addEventListener('click', () => {
       getItemStorage();
       let newInput = newTaskInput.value;
