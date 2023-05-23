@@ -7,7 +7,10 @@ const displayTask = document.getElementById('js-display-list');
 
 const myTask = JSON.parse(localStorage.getItem('myTask')) || [];
 
+//display current tasks
 renderTaskList();
+
+//add tasks
 function addTodo() {
   getItemsStorage();
   task = inputTask.value;
@@ -22,6 +25,7 @@ addTask.addEventListener('click', () => {
   addTodo();
 })
 
+//display tasks
 function renderTaskList() {
   getItemsStorage();
   let todoHTML = '';
@@ -38,6 +42,19 @@ function renderTaskList() {
   })
   displayTask.innerHTML = todoHTML;
   
+  
+  //mark the task that is finished
+  document.querySelectorAll('.task-list').forEach((taskFinished, index) => {
+    taskFinished.addEventListener('click', () => {
+      if (taskFinished.style.textDecoration === "none") {
+        taskFinished.style.textDecoration = "line-through";
+      } else {
+        taskFinished.style.textDecoration = "none";
+      }
+    })
+  })
+  
+  //delete tasks
   document.querySelectorAll('#js-delete-task').forEach((deleteBtn, index) => {
     deleteBtn.addEventListener('click', () => {
       myTask.splice(index, 1);
@@ -46,6 +63,7 @@ function renderTaskList() {
     })
   })
   
+  //edit tasks
   document.querySelectorAll('#js-update-task').forEach((editTask, index) => {
     editTask.addEventListener('click', () => {
       updatedTask.value = index;
@@ -58,6 +76,7 @@ function renderTaskList() {
   })
 }
 
+//save edited tasks
 saveTaskBtn.addEventListener('click', () => {
   getItemsStorage();
   let indx = updatedTask.value;
