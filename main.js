@@ -60,6 +60,7 @@ function renderTaskList() {
       myTask.splice(index, 1);
       removeItemsStorage();
       renderTaskList();
+      showDeleteConfirmation();
     })
   })
   
@@ -87,6 +88,16 @@ saveTaskBtn.addEventListener('click', () => {
   renderTaskList();
   inputTask.value = '';
 })
+
+//checking if the task is done.
+function showDeleteConfirmation() {
+  let confirmation = confirm('Are you done with the task?');
+  
+  if (confirmation === true) {
+    return true;
+  } else {
+    return false;
+  }
 
 function setItemsStorage() {
   localStorage.setItem('myTask', JSON.stringify(myTask))
