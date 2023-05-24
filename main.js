@@ -57,10 +57,21 @@ function renderTaskList() {
   //delete tasks
   document.querySelectorAll('#js-delete-task').forEach((deleteBtn, index) => {
     deleteBtn.addEventListener('click', () => {
-      myTask.splice(index, 1);
-      removeItemsStorage();
       renderTaskList();
-      showDeleteConfirmation();
+      
+      
+      //confirmation for deleting tasks.
+      let toDelete= confirm('Are done with your task?');
+      if (toDelete === true) {
+        myTask.splice(index, 1);
+        removeItemsStorage();
+        renderTaskList();
+        alert('Task is done!')
+        return true;
+      } else {
+        renderTaskList();
+        return false;
+      }
     })
   })
   
@@ -89,16 +100,7 @@ saveTaskBtn.addEventListener('click', () => {
   inputTask.value = '';
 })
 
-//checking if the task is done.
-function showDeleteConfirmation() {
-  let confirmation = confirm('Are you done with the task?');
-  
-  if (confirmation === true) {
-    return true;
-  } else {
-    return false;
-  }
-
+//setting up localStorage
 function setItemsStorage() {
   localStorage.setItem('myTask', JSON.stringify(myTask))
 }
