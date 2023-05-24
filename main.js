@@ -46,11 +46,8 @@ function renderTaskList() {
   //mark the task that is finished
   document.querySelectorAll('.task-list').forEach((taskFinished, index) => {
     taskFinished.addEventListener('click', () => {
-      if (taskFinished.style.textDecoration === "none") {
-        taskFinished.style.textDecoration = "line-through";
-      } else {
-        taskFinished.style.textDecoration = "none";
-      }
+      taskFinished.classList.toggle('task-list');
+      taskFinished.classList.add('isToggled');
     })
   })
   
