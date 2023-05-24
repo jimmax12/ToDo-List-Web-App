@@ -35,7 +35,7 @@ function renderTaskList() {
     <div class="task-list-container">
     <p class="task-list">${taskList}</p>
     <button class="edit-button" id="js-update-task">Edit</button> 
-    <button class="delete-button" id="js-delete-task">Delete</button>
+    <button class="delete-button" id="js-delete-task">Done</button>
     </div>
     `
     todoHTML += renderHTML;
@@ -58,7 +58,7 @@ function renderTaskList() {
       
       
       //confirmation for deleting tasks.
-      let toDelete= confirm('Are done with your task?');
+      let toDelete= confirm('Are you done with the task?');
       if (toDelete === true) {
         myTask.splice(index, 1);
         removeItemsStorage();
