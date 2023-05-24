@@ -43,13 +43,13 @@ function renderTaskList() {
   displayTask.innerHTML = todoHTML;
   
   
-  //mark the task that is finished
+  /*//mark the task that is finished
   document.querySelectorAll('.task-list').forEach((taskFinished, index) => {
     taskFinished.addEventListener('click', () => {
       taskFinished.classList.toggle('task-list');
       taskFinished.classList.add('isToggled');
     })
-  })
+  })*/
   
   //delete tasks
   document.querySelectorAll('#js-delete-task').forEach((deleteBtn, index) => {
@@ -58,12 +58,11 @@ function renderTaskList() {
       
       
       //confirmation for deleting tasks.
-      let toDelete= confirm('Are you done with the task?');
+      let toDelete= confirm('Task is finished!');
       if (toDelete === true) {
         myTask.splice(index, 1);
         removeItemsStorage();
         renderTaskList();
-        alert('Task is done!')
         return true;
       } else {
         renderTaskList();
