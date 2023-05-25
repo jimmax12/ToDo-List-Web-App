@@ -58,7 +58,7 @@ function renderTaskList() {
       
       
       //confirmation for deleting tasks.
-      let toDelete= confirm('Task is finished!');
+      let toDelete= confirm("Task finished! Let's celebrate!🎆");
       if (toDelete === true) {
         myTask.splice(index, 1);
         removeItemsStorage();

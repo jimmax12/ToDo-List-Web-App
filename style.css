@@ -68,6 +68,13 @@ h3 {
   margin-top: 10px;
 }
 
+.task-list {
+  text-decoration: none;
+}
+.is-toggled {
+  text-decoration: line-through;
+}
+
 .edit-button, .delete-button {
   margin-right: 3px;
   font-size: 14px;
