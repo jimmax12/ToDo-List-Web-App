@@ -43,13 +43,13 @@ function renderTaskList() {
   displayTask.innerHTML = todoHTML;
   
   
-  /*//mark the task that is finished
+  //mark the task that is finished
   document.querySelectorAll('.task-list').forEach((taskFinished, index) => {
     taskFinished.addEventListener('click', () => {
       taskFinished.classList.toggle('task-list');
       taskFinished.classList.add('isToggled');
     })
-  })*/
+  })
   
   //delete tasks
   document.querySelectorAll('#js-delete-task').forEach((deleteBtn, index) => {
