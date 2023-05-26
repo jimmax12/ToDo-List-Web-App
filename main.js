@@ -48,8 +48,8 @@ function renderTaskList() {
     taskFinished.addEventListener('click', () => {
       taskFinished.classList.toggle('task-list');
       taskFinished.classList.add('isToggled');
-    })*/
-  })
+    })
+  })*/
   
   //delete tasks
   document.querySelectorAll('#js-delete-task').forEach((deleteBtn, index) => {
